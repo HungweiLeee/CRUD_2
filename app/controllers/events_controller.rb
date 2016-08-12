@@ -10,4 +10,11 @@ class EventsController < ApplicationController
     # 變數命名建議是可以看得出內容的命名，例如events容易理解裡面是由很多個event組成。
 
   end
+
+  # events/new
+  # action 是 new 對應的view會是 app/views/events/new.html.erb
+  def new
+    # 透過Event model 產生一個空的Event物件，透過實例變數（instance variable）傳遞到view中。
+    @event = Event.new
+  end
 end
