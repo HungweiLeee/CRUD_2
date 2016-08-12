@@ -49,4 +49,20 @@ class EventsController < ApplicationController
     # 指派到實例變數（instance variable），view可以使用該變數。
 
   end
+
+  # events/update/:id
+  # 這個action是接收edit表單post過來的東西後進行資料資料
+  # !!!! action update並沒有對應的view 新增完成後這個action 是進行轉跳
+  def update
+    # 藉由Event model，利用params[:id]找到該id的event
+    # @event = ____________
+
+    # 處理strong parameter
+    # @event = Event.update(_____)
+
+    # 轉跳到show
+    # action show是顯示一筆資料 因此redirect_to 除了告訴rails 要去哪個action外
+    # 還需要帶入:id => @event 告訴rails是哪一筆資料
+
+  end
 end
