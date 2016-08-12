@@ -33,4 +33,13 @@ class EventsController < ApplicationController
     # 還需要帶入:id => @event 告訴rails是哪一筆資料
 
   end
+
+  # events/show/:id
+  # action 是 show 對應的view 是 app/views/events/show.html.erb
+  def show
+    # 藉由Event model，利用params[:id]找到該id的event
+    # 指派到實例變數（instance variable），view可以使用該變數。
+
+  end
+
 end
