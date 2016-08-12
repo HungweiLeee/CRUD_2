@@ -42,4 +42,11 @@ class EventsController < ApplicationController
 
   end
 
+  # events/edit/:id
+  # action 是 edit 對應的view 是 app/views/events/edit.html.erb
+  def edit
+    # 藉由Event model，利用params[:id]找到該id的event
+    # 指派到實例變數（instance variable），view可以使用該變數。
+
+  end
 end
