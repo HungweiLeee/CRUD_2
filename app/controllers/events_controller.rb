@@ -14,7 +14,7 @@ class EventsController < ApplicationController
   # events/new
   # action 是 new 對應的view會是 app/views/events/new.html.erb
   def new
-    # 透過Event model 產生一個空的Event物件，透過實例變數（instance variable）傳遞到view中。
+    # 透過Event model 產生一個空的Event物件，並將它存到實例變數（instance variable）中，view 中才可以使用。
     @event = Event._______
   end
 
