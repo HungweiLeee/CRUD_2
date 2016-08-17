@@ -54,10 +54,15 @@ class EventsController < ApplicationController
   # 這個action是接收edit表單post過來的東西後進行資料資料
   # !!!! action update並沒有對應的view 修改完成後這個action 是進行轉跳
   def update
-    # 藉由Event model，利用params[:id]找到該id的event
+    # 藉由Event model，利用params[:id]找到該id在資料表中的那一個row，
+    # @event會是一個Event產出來的物件，代表資料表中的一個row。
     @event = ____________
 
-    # 處理strong parameter
+    # @event是透過Event查詢出來的物件，代表資料表的一個row。
+    # 可以使用instance method，update去更新內容。
+    # ex: @event.update(:name => "foo" , :description => "bar")
+    # 但現在update的資料是從表單post進來
+    # 因此處理strong parameter
     @event.update(_____)
 
     # 轉跳到show
