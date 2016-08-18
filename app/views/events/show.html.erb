@@ -1,4 +1,8 @@
-<h1>第一次打開這個網頁會是空白的！請到對應的view中刪除這個行，依指示完成此頁面</h1>
+<%= @event.name %>
+<%= @event.description %>
+
+<%= @page_title = @event.name %>
+
 <!--
 controlerr中實例變數（instance variable）
 顯示這一筆資料的內容
@@ -8,6 +12,8 @@ ex:
 @event.is_public
 @event.capacity
 -->
+<p><%= link_to 'Back to index' , :cotroller => 'events' , :action => 'index'%></p>
+  
 
 
 
